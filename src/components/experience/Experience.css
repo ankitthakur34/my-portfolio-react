@@ -1,0 +1,39 @@
+#exp{
+    overflow: hidden;
+    width: 100vw;
+    max-width: 75rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    /* height: calc(100vh-5rem); */
+    /* background-color: aliceblue;
+    color: black; */
+
+}
+.title{
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+}
+.desc{
+    font-size: 1.2rem;
+    font-weight: 200;
+    padding: 0 3rem; 
+    max-width: 70rem;
+    letter-spacing: 1px;
+}
+.descHead{
+    color: #FF9933;
+    font-weight: 400;
+}
+.skillBars{
+    margin: 1.5rem;
+    width: 100vw;
+    max-width: 80%;
+    text-align: left;
+}

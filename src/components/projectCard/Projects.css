@@ -1,0 +1,54 @@
+.project{
+    margin: 1rem;
+    border-radius: 0.5rem;
+    background: #9933FF;
+    margin: 0.5rem;
+    width: 19rem;
+}
+.proImg{
+    height: 20rem;
+    object-fit: cover;
+    width: 100%;
+   border-top-right-radius: 0.5rem;
+   border-top-left-radius: 0.5rem;
+
+
+   
+
+}
+.proContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 1rem;
+    color: black;
+    padding: 0.3rem;
+    align-items: center;
+    gap: 2px;
+    
+}
+.proTitle{
+    font-size: 1.2rem;
+    font-weight: 500;
+  
+    
+}
+.proLink{
+    padding: 0 0.4rem;
+    border-radius: 0.4rem;
+    background: lightgreen;
+    margin: 0.5rem;
+    text-align: center;
+    align-items: center;
+ 
+}
+.proLink>a{
+    text-align: center;align-self: center;
+}
+
+@media screen and (max-width:720) {
+   .project{
+    height: 48rem;
+   }
+}
