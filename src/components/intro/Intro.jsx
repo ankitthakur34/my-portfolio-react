@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Intro.css";
 import profile from "../../assets/ankgg.gif";
 import { Link } from "react-scroll";
@@ -14,7 +14,24 @@ import yt from "../../assets/leetcode.png";
 
 import twi from "../../assets/twitter1.png";
 
+import { client } from "../../../../ankport-backend/sanity";
+
+const getdata = async () => {
+  return await client.fetch(`*[_type == "links"]`);
+};
+
 const Intro = () => {
+  const [data, setdata] = useState([]);
+
+  useEffect(() => {
+    getdata()
+      .then((data) => {
+        setdata(data);
+      })
+      .catch((error) => {
+        console.log("error fetching data", error);
+      });
+  }, []);
   return (
     <section id="intro" style={{ color: "white" }}>
       <div className="introContent">
@@ -42,10 +59,7 @@ const Intro = () => {
           creating user friendy websites and applications.
         </p>
 
-        <a
-          href="https://drive.google.com/file/d/1UF-ZGhu8yUQK36R63QUcyHES1hd8Cdpg/view?usp=sharing"
-          target="-blank"
-        >
+        <a href={data[0].link} target="-blank">
           <button className="btn">
             <img src={hireImg} alt="hire me" className="btnImg" />
             Resume
