@@ -28,7 +28,8 @@
 }
 @media screen and (max-width:360px) {
     .skillBarImg{
-        display: none;
+        width: 2rem;
+        height: 2rem;
     }
     .skillBarText>p{
         font-size: 2vw;
