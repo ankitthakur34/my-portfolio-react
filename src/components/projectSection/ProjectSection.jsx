@@ -1,22 +1,9 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import "./ProjectSection.css";
 
 import Project from "../projectCard/Project";
-import pro1 from "../../assets/homeFit.jpg";
-import pro2 from "../../assets/laundry.jpg";
-import pro3 from "../../assets/test.jpg";
-import pro4 from "../../assets/snakeL.jpg";
-import pro5 from "../../assets/edu.jpg";
-import { client } from "../../../../ankport-backend/sanity";
-
-import imageUrlBuilder from "@sanity/image-url";
-
-// Get a pre-configured url-builder from your sanity client
-const builder = imageUrlBuilder(client);
-
-function urlFor(source) {
-  return builder.image(source);
-}
+import { client } from "../../sanity";
 
 const getdata = async () => {
   return await client.fetch(`*[_type == "project"]`);
@@ -40,7 +27,7 @@ const ProjectSection = () => {
       <span className="desc">
         {" "}
         I have developed a range of projects using Java, React.js, and React
-        Native. With React.js, I've created responsive web interfaces and
+        Native. With React.js, I ve created responsive web interfaces and
         integrated with backends. React Native allowed me to build
         cross-platform mobile apps. These projects highlight my versatile
         software development skills.

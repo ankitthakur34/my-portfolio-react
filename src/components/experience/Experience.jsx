@@ -3,11 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./Experience.css";
 import Skillset from "../skillSet/Skillset";
 
-import webd from "../../assets/website-design.png";
-import appd from "../../assets/app-design.png";
-import uiD from "../../assets/ui-design.png";
-import { client } from "../../../../ankport-backend/sanity";
-
+import { client } from "../../sanity";
 const getData = () => {
   return client.fetch(`*[_type == "experience"]`);
 };

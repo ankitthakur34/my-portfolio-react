@@ -2,9 +2,9 @@
 import React, { useEffect, useState } from "react";
 import "./Intro.css";
 import profile from "../../assets/ankgg.gif";
-import { Link } from "react-scroll";
+
 import hireImg from "../../assets/hireme.png";
-import { Fade, Zoom } from "react-awesome-reveal";
+
 import Typewriter from "typewriter-effect";
 
 import fb from "../../assets/ll.png";
@@ -14,7 +14,7 @@ import yt from "../../assets/leetcode.png";
 
 import twi from "../../assets/twitter1.png";
 
-import { client } from "../../../../ankport-backend/sanity";
+import { client } from "../../sanity";
 
 const getdata = async () => {
   return await client.fetch(`*[_type == "links"]`);
@@ -58,13 +58,19 @@ const Intro = () => {
           <br></br>
           creating user friendy websites and applications.
         </p>
+        {data.map((elem, ind) => {
+          return (
+            <div key={ind}>
+              <a href={elem.link} target="-blank">
+                <button className="btn">
+                  <img src={hireImg} alt="hire me" className="btnImg" />
+                  Resume
+                </button>
+              </a>
+            </div>
+          );
+        })}
 
-        <a href={data[0].link} target="-blank">
-          <button className="btn">
-            <img src={hireImg} alt="hire me" className="btnImg" />
-            Resume
-          </button>
-        </a>
         <div className="link">
           <a
             href="https://www.linkedin.com/in/ankit-singh-thakur-0333b0200/"

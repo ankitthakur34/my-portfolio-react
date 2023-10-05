@@ -3,12 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./Skill.css";
 import Skillset from "../skillSet/Skillset";
 
-import webd from "../../assets/website-design.png";
-import appd from "../../assets/app-design.png";
-import uiD from "../../assets/ui-design.png";
-
-import { client } from "../../../../ankport-backend/sanity";
-
+import { client } from "../../sanity";
 const getdata = async () => {
   return await client.fetch(`*[_type == "skills"]`);
 };
@@ -43,7 +38,7 @@ const Skill = () => {
       <div className="skillBars">
         {data.map((elem, index) => {
           return (
-            <>
+            <div key={index}>
               <Skillset
                 imgsrc={elem.image}
                 alt="web image"
@@ -51,7 +46,7 @@ const Skill = () => {
                 bgColor="rgb(50,50,50)"
                 para={elem.description}
               />
-            </>
+            </div>
           );
         })}
         {/* <Skillset
