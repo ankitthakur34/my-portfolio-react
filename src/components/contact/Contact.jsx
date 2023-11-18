@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef ,useContext} from "react";
 import "./Contact.css";
 import fb from "../../assets/facebook-icon.png";
 import insta from "../../assets/instagram.png";
@@ -9,8 +9,12 @@ import con from "../../assets/contact2.gif";
 import twi from "../../assets/twitter.png";
 
 import emailjs from "@emailjs/browser";
+import { Theme } from "../../context/Context";
+
 
 const Contact = () => {
+  const { light } = useContext(Theme);
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -38,7 +42,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" style={{ color: "white" }}>
+    <section id="contact" style={{ color: light?"#9933FF":"white" }}>
       <div className="contactDiv">
         <h1 className="heading">Contact Me</h1>
         <span className="para">
@@ -70,12 +74,15 @@ const Contact = () => {
             rows={5}
           />
 
-          <button type="submit" value="send" className="formBtn">
+          <button 
+          style={{backgroundColor : light? "grey":"white" }}
+          
+           type="submit" value="send" className="formBtn">
             Submit
           </button>
         </form>
       </div>
-      <img src={con} alt="contact" className="contact1" />
+      {/* <img src={con} alt="contact" className="contact1" /> */}
     </section>
   );
 };
