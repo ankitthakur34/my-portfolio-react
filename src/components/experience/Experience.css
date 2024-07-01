@@ -44,6 +44,17 @@
         margin: 1rem;
         max-width: 90vw;
     }
+    title{
+        font-size: 1.5rem;
+        padding: auto;
+
+    }
+    .desc{
+        font-size: 0.8rem;
+        padding: 0 3rem; 
+        max-width: 70rem;
+        letter-spacing: 0.5px;
+    }
    
 }
 
