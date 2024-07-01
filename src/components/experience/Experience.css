@@ -31,9 +31,25 @@
     color: #FF9933;
     font-weight: 400;
 }
-.skillBars{
+.skillBars {
     margin: 1.5rem;
-    width: 100vw;
-    max-width: 80%;
+    width: 100%;
+    max-width: 80vw;
     text-align: left;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .skillBars {
+        margin: 1rem;
+        max-width: 90vw;
+    }
+   
+}
+
+@media (max-width: 480px) {
+    .skillBars {
+        margin: 0.5rem;
+        max-width: 95vw;
+    }
 }

@@ -4,6 +4,7 @@ import "./Experience.css";
 import Skillset from "../skillSet/Skillset";
 
 import { client } from "../../sanity";
+import ExperienceCompo from "./ExperienceCompo";
 const getData = () => {
   return client.fetch(`*[_type == "experience"]`);
 };
@@ -36,7 +37,7 @@ const Experience = () => {
         {data.map((elem, index) => {
           return (
             <div key={index}>
-              <Skillset
+              <ExperienceCompo
                 imgsrc={elem.image}
                 alt="web image"
                 title={elem.name}

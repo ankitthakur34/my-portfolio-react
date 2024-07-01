@@ -1,0 +1,53 @@
+.skillBar2{
+    display: flex;
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    background: rgb(50, 50,50);
+}
+.skillBarImg2{
+    width: 6rem;
+    height: 4rem;
+    object-fit: cover;
+    margin-right: 2rem;
+}
+.skillBarText2>h2{
+    letter-spacing: 1px;
+    color: #9933FF;
+}
+.skillBarText2>p{
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width:720px) {
+    .skillBarText2>p{
+        font-size: 3.5vw;
+    }
+}
+@media screen and (max-width:360px) {
+    .skillBarImg2{
+        width: 2rem;
+        height: 2rem;
+        display: none;
+    }
+    .skillBarText2>p{
+        font-size: 2vw;
+    }
+}
+@media screen and (max-width:480px) {
+    .skillBarText2>p{
+        font-size: 2.5vw;
+    }
+    .skillBarImg2{
+        width: 2.25rem;
+        height: 2.25rem;
+        display: none;
+
+    }
+    .skillBarText2>h2{
+        font-size: 4vw;
+    }
+}
