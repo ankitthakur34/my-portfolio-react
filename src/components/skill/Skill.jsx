@@ -32,7 +32,7 @@ const Skill = () => {
           Java, JavaScript, React.js, React-Native, Data Structures and
           Algorithms, OOPs and DBMS{" "}
         </span>{" "}
-        also have a Working experience of 3 Months in the field of Android
+        also have a Working experience of over 1 year in the field of Software
         Development.
       </span>
       <div className="skillBars">
